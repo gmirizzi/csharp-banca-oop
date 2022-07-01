@@ -24,5 +24,35 @@ namespace csharp_banca_oop
             clientList.Add(newClient);
             Console.WriteLine("Cliente aggiunto");
         }
+
+        public static void EditClient ()
+        {
+
+        }
+
+        public static Cliente SearchClient ()
+        {
+
+        }
+
+        public static void AddLoan ()
+        {
+
+        }
+
+        public static List<Prestito> SearchClientLoans (string cf)
+        {
+
+        }
+
+        public static int GetLoansAmount (string cf)
+        {
+
+        }
+
+        public static int GetRateRimanenti (string cf)
+        {
+
+        }
     }
 }

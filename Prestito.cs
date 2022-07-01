@@ -13,5 +13,10 @@ namespace csharp_banca_oop
         int Rata { get; set; }
         DateTime Inizio { get; set; }
         DateTime Fine { get; set; }
+
+        public string Riepilogo ()
+        {
+            return "";
+        }
     }
 }

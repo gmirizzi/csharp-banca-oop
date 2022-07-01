@@ -21,5 +21,10 @@ namespace csharp_banca_oop
         public string CodiceFiscale { get; set; }
 
         public int Stipendio { get; set; }
+
+        public string Riepilogo()
+        {
+            return "";
+        }
     }
 }
