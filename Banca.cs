@@ -82,10 +82,16 @@ namespace csharp_banca_oop
             return listaPrestiti;
         }
 
-        //public static int GetLoansAmount(string cf)
-        //{
-
-        //}
+        public static int GetLoansAmount(string cf)
+        {
+            int amount = 0;
+            List<Prestito> listaPrestiti = Banca.SearchClientLoans(cf);
+            foreach (Prestito item in listaPrestiti)
+            {
+                amount += item.Ammontare;
+            }
+            return amount;
+        }
 
         //public static int GetRateRimanenti(string cf)
         //{
