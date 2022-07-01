@@ -24,7 +24,9 @@ namespace csharp_banca_oop
 
         public string Riepilogo()
         {
-            return "";
+            return $"Name: {this.FirstName}";
+
+
         }
     }
 }
