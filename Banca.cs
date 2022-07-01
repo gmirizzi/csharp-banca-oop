@@ -103,5 +103,14 @@ namespace csharp_banca_oop
             }
             return totRate;
         }
+
+        public static void Riepilogo()
+        {
+            Console.WriteLine($"Intestatario    \tSomma\tData inizio\tData fine\tImporto rata");
+            foreach (Prestito prestito in loanList)
+            {
+                Console.WriteLine($"{prestito.Intestatario.FirstName} {prestito.Intestatario.Surname}\t{prestito.Ammontare}\t{prestito.Inizio.ToShortDateString()}\t{prestito.Fine.ToShortDateString()}\t{prestito.Rata}");
+            }
+        }
     }
 }
