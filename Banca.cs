@@ -14,11 +14,11 @@ namespace csharp_banca_oop
 
         public static void AddClient()
         {
-            Console.WriteLine("Inserisci il nome ");
+            Console.Write("Inserisci il nome ");
             string name = Console.ReadLine();
-            Console.WriteLine("Inserisci il cognome ");
+            Console.Write("Inserisci il cognome ");
             string surname = Console.ReadLine();
-            Console.WriteLine("Inserisci il codice fiscale ");
+            Console.Write("Inserisci il codice fiscale ");
             string cf = Console.ReadLine();
             Cliente newClient = new Cliente(name, surname, cf);
             clientList.Add(newClient);
@@ -27,7 +27,19 @@ namespace csharp_banca_oop
 
         public static void EditClient()
         {
-
+            Console.WriteLine("Inserisci il codice fiscale del cliente ");
+            string cf = Console.ReadLine();
+            Cliente client = Banca.SearchClient(cf);
+            Console.Write("Inserisci nuovo nome ");
+            string nameEdited = Console.ReadLine();
+            client.FirstName = nameEdited;
+            Console.Write("Inserisci nuovo cognome ");
+            string surnameEdited = Console.ReadLine();
+            client.Surname = surnameEdited;
+            Console.Write("Inserisci nuovo codice fiscale ");
+            string cfEdited = Console.ReadLine();
+            client.CodiceFiscale = cfEdited;
+            Console.WriteLine("Cliente aggiunto");
         }
 
         public static Cliente SearchClient(string cf)
