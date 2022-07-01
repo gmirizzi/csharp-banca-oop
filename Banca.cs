@@ -9,10 +9,10 @@ namespace csharp_banca_oop
     internal class Banca
     {
         public static string name;
-        public static List<Prestito> loanList = new List<Prestito> ();
+        public static List<Prestito> loanList = new List<Prestito>();
         public static List<Cliente> clientList = new List<Cliente>();
 
-        public static void AddClient ()
+        public static void AddClient()
         {
             Console.WriteLine("Inserisci il nome ");
             string name = Console.ReadLine();
@@ -25,32 +25,38 @@ namespace csharp_banca_oop
             Console.WriteLine("Cliente aggiunto");
         }
 
-        public static void EditClient ()
+        public static void EditClient()
         {
 
         }
 
-        public static Cliente SearchClient ()
+        public static Cliente SearchClient(string cf)
+        {
+            Cliente temp = null;
+            foreach (Cliente cliente in clientList)
+            {
+                if (cliente.CodiceFiscale == cf)
+                    temp = cliente;
+            }
+            return temp;
+        }
+
+        public static void AddLoan()
         {
 
         }
 
-        public static void AddLoan ()
+        public static List<Prestito> SearchClientLoans(string cf)
         {
 
         }
 
-        public static List<Prestito> SearchClientLoans (string cf)
+        public static int GetLoansAmount(string cf)
         {
 
         }
 
-        public static int GetLoansAmount (string cf)
-        {
-
-        }
-
-        public static int GetRateRimanenti (string cf)
+        public static int GetRateRimanenti(string cf)
         {
 
         }
