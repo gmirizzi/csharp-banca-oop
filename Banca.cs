@@ -86,16 +86,22 @@ namespace csharp_banca_oop
         {
             int amount = 0;
             List<Prestito> listaPrestiti = Banca.SearchClientLoans(cf);
-            foreach (Prestito item in listaPrestiti)
+            foreach (Prestito prestito in listaPrestiti)
             {
-                amount += item.Ammontare;
+                amount += prestito.Ammontare;
             }
             return amount;
         }
 
-        //public static int GetRateRimanenti(string cf)
-        //{
-
-        //}
+        public static int GetRateTotali(string cf)
+        {
+            List<Prestito> listaPrestiti = Banca.SearchClientLoans(cf);
+            int totRate = 0;
+            foreach (Prestito prestito in listaPrestiti)
+            {
+                totRate += prestito.Ammontare / prestito.Rata;
+            }
+            return totRate;
+        }
     }
 }
