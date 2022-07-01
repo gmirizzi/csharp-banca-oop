@@ -3,6 +3,9 @@
 Cliente cliente1 = new Cliente("Giuseppe", "Mirizzi", "asdf1234");
 Banca.clientList.Add(cliente1);
 
+//Modifica cliente
+Banca.EditClient();
+
 //Ricerca cliente
 Console.Write("Inserisci codice fiscale");
 string cf = Console.ReadLine();

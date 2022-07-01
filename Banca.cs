@@ -71,10 +71,16 @@ namespace csharp_banca_oop
             Console.WriteLine("Prestito aggiunto");
         }
 
-        //public static List<Prestito> SearchClientLoans(string cf)
-        //{
-
-        //}
+        public static List<Prestito> SearchClientLoans(string cf)
+        {
+            List<Prestito> listaPrestiti = new List<Prestito>();
+            foreach (Prestito prestito in Banca.loanList)
+            {
+                if (prestito.Intestatario.CodiceFiscale == cf)
+                    listaPrestiti.Add(prestito);
+            }
+            return listaPrestiti;
+        }
 
         //public static int GetLoansAmount(string cf)
         //{
