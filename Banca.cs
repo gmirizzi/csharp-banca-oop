@@ -93,13 +93,13 @@ namespace csharp_banca_oop
             return amount;
         }
 
-        public static int GetRateTotali(string cf)
+        public static int GetRateRimanenti(string cf)
         {
             List<Prestito> listaPrestiti = Banca.SearchClientLoans(cf);
             int totRate = 0;
             foreach (Prestito prestito in listaPrestiti)
             {
-                totRate += prestito.Ammontare / prestito.Rata;
+                totRate += prestito.Fine.Subtract(DateTime.Today).Days / 30;
             }
             return totRate;
         }
