@@ -24,9 +24,10 @@ namespace csharp_banca_oop
 
         public string Riepilogo()
         {
-            return $"Name: {this.FirstName}";
-
-
+            return $"Name: {this.FirstName}\n" +
+                $"Cognome: {this.Surname}\n" +
+                $"Codice Fiscale: {this.CodiceFiscale}\n" +
+                $"Stipendio: {this.Stipendio}";
         }
     }
 }

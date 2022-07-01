@@ -2,6 +2,9 @@
 //Aggiunta cliente
 Cliente cliente1 = new Cliente("Giuseppe", "Mirizzi", "asdf1234");
 Banca.clientList.Add(cliente1);
+
+Console.WriteLine(cliente1.Riepilogo());
+
 DateTime date1 = new DateTime(2023, 6, 3, 22, 15, 0);
 Console.WriteLine(date1);
 Console.WriteLine(DateTime.Today);
