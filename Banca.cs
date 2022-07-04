@@ -66,9 +66,7 @@ namespace csharp_banca_oop
             DateTime inizio = DateTime.Parse(Console.ReadLine());
             Console.WriteLine("Inserisci la data di fine ");
             DateTime fine = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("Inserisci il tasso di interesse ");
-            int tassoInteresse = int.Parse(Console.ReadLine());
-            Prestito newLoan = new Prestito(client, ammontare, rata, inizio, fine, tassoInteresse);
+            Prestito newLoan = new Prestito(client, ammontare, rata, inizio, fine);
             loanList.Add(newLoan);
             Console.WriteLine("Prestito aggiunto");
         }

@@ -8,7 +8,7 @@ namespace csharp_banca_oop
 {
     public class Prestito
     {
-        protected Prestito(Cliente intestatario, int ammontare, int rata, DateTime inizio, DateTime fine)
+        public Prestito(Cliente intestatario, int ammontare, int rata, DateTime inizio, DateTime fine)
         {
             Intestatario = intestatario;
             Ammontare = ammontare;
