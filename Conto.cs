@@ -34,7 +34,7 @@ namespace csharp_banca_oop
         }
         public override void Deposita(int somma)
         {
-            if (somma <= 5000)
+            if (somma+base.Saldo <= 5000)
                 base.Saldo += somma;
         }
 
