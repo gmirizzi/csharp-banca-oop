@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_banca_oop
 {
-    internal class Cliente
+    public class Cliente
     {
         public Cliente(string firstName, string surname, string codiceFiscale)
         {
